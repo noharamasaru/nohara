@@ -1,6 +1,6 @@
 {
   "api": {
-    "LambdaTest": {
+    "noharaAppUser": {
       "dependsOn": [
         {
           "attributes": [
@@ -8,35 +8,7 @@
             "Arn"
           ],
           "category": "function",
-          "resourceName": "LambdaTest1"
-        }
-      ],
-      "providerPlugin": "awscloudformation",
-      "service": "API Gateway"
-    },
-    "sakumotoAppUser": {
-      "dependsOn": [
-        {
-          "attributes": [
-            "Name",
-            "Arn"
-          ],
-          "category": "function",
-          "resourceName": "sakumotoAppUser"
-        }
-      ],
-      "providerPlugin": "awscloudformation",
-      "service": "API Gateway"
-    },
-    "todoApps": {
-      "dependsOn": [
-        {
-          "attributes": [
-            "Name",
-            "Arn"
-          ],
-          "category": "function",
-          "resourceName": "LambdaTest"
+          "resourceName": "noharaAppUser"
         }
       ],
       "providerPlugin": "awscloudformation",
@@ -44,7 +16,7 @@
     }
   },
   "auth": {
-    "amplifyhomes": {
+    "noharaapp": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
@@ -72,127 +44,42 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
-    },
-    "userPoolGroups": {
-      "dependsOn": [
-        {
-          "attributes": [
-            "UserPoolId",
-            "AppClientIDWeb",
-            "AppClientID",
-            "IdentityPoolId"
-          ],
-          "category": "auth",
-          "resourceName": "amplifyhomes"
-        }
-      ],
-      "providerPlugin": "awscloudformation",
-      "service": "Cognito-UserPool-Groups"
     }
   },
   "function": {
-    "LambdaTest": {
-      "build": true,
-      "dependsOn": [],
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    },
-    "LambdaTest1": {
-      "build": true,
-      "dependsOn": [],
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    },
-    "sakumotoAppUser": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    },
-    "todoFunction": {
+    "noharaAppUser": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
   },
   "parameters": {
-    "AMPLIFY_function_LambdaTest1_deploymentBucketName": {
+    "AMPLIFY_function_noharaAppUser_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "LambdaTest1"
+          "resourceName": "noharaAppUser"
         }
       ]
     },
-    "AMPLIFY_function_LambdaTest1_s3Key": {
+    "AMPLIFY_function_noharaAppUser_s3Key": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "LambdaTest1"
-        }
-      ]
-    },
-    "AMPLIFY_function_LambdaTest_deploymentBucketName": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "LambdaTest"
-        }
-      ]
-    },
-    "AMPLIFY_function_LambdaTest_s3Key": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "LambdaTest"
-        }
-      ]
-    },
-    "AMPLIFY_function_sakumotoAppUser_deploymentBucketName": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "sakumotoAppUser"
-        }
-      ]
-    },
-    "AMPLIFY_function_sakumotoAppUser_s3Key": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "sakumotoAppUser"
-        }
-      ]
-    },
-    "AMPLIFY_function_todoFunction_deploymentBucketName": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "todoFunction"
-        }
-      ]
-    },
-    "AMPLIFY_function_todoFunction_s3Key": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "todoFunction"
+          "resourceName": "noharaAppUser"
         }
       ]
     }
   },
   "storage": {
-    "s3amplifyhomesstorage855d51b1": {
+    "noharaAppUser": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    },
+    "s3noharaappstorage6fb6ee65": {
       "dependsOn": [],
       "providerPlugin": "awscloudformation",
       "service": "S3"
-    },
-    "sakumotoApp": {
-      "providerPlugin": "awscloudformation",
-      "service": "DynamoDB"
-    },
-    "sakumotoAppUser": {
-      "providerPlugin": "awscloudformation",
-      "service": "DynamoDB"
     }
   }
 }

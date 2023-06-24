@@ -25,23 +25,56 @@ export default function HomeUpdateForm(props) {
   } = props;
   const initialValues = {
     name: "",
-    image_url: "",
-    bounty: "",
-    birthday: "",
+    pass: "",
+    auMNP: "",
+    aucellup: "",
+    aushinki: "",
+    aukihen: "",
+    uqMNP: "",
+    uqrikoup: "",
+    uqshinki: "",
+    uqkihen: "",
+    cyura: "",
+    yuima: "",
+    jigin: "",
+    credit: "",
+    Chrome: "",
   };
   const [name, setName] = React.useState(initialValues.name);
-  const [image_url, setImage_url] = React.useState(initialValues.image_url);
-  const [bounty, setBounty] = React.useState(initialValues.bounty);
-  const [birthday, setBirthday] = React.useState(initialValues.birthday);
+  const [pass, setPass] = React.useState(initialValues.pass);
+  const [auMNP, setAuMNP] = React.useState(initialValues.auMNP);
+  const [aucellup, setAucellup] = React.useState(initialValues.aucellup);
+  const [aushinki, setAushinki] = React.useState(initialValues.aushinki);
+  const [aukihen, setAukihen] = React.useState(initialValues.aukihen);
+  const [uqMNP, setUqMNP] = React.useState(initialValues.uqMNP);
+  const [uqrikoup, setUqrikoup] = React.useState(initialValues.uqrikoup);
+  const [uqshinki, setUqshinki] = React.useState(initialValues.uqshinki);
+  const [uqkihen, setUqkihen] = React.useState(initialValues.uqkihen);
+  const [cyura, setCyura] = React.useState(initialValues.cyura);
+  const [yuima, setYuima] = React.useState(initialValues.yuima);
+  const [jigin, setJigin] = React.useState(initialValues.jigin);
+  const [credit, setCredit] = React.useState(initialValues.credit);
+  const [Chrome, setChrome] = React.useState(initialValues.Chrome);
   const [errors, setErrors] = React.useState({});
   const resetStateValues = () => {
     const cleanValues = homeRecord
       ? { ...initialValues, ...homeRecord }
       : initialValues;
     setName(cleanValues.name);
-    setImage_url(cleanValues.image_url);
-    setBounty(cleanValues.bounty);
-    setBirthday(cleanValues.birthday);
+    setPass(cleanValues.pass);
+    setAuMNP(cleanValues.auMNP);
+    setAucellup(cleanValues.aucellup);
+    setAushinki(cleanValues.aushinki);
+    setAukihen(cleanValues.aukihen);
+    setUqMNP(cleanValues.uqMNP);
+    setUqrikoup(cleanValues.uqrikoup);
+    setUqshinki(cleanValues.uqshinki);
+    setUqkihen(cleanValues.uqkihen);
+    setCyura(cleanValues.cyura);
+    setYuima(cleanValues.yuima);
+    setJigin(cleanValues.jigin);
+    setCredit(cleanValues.credit);
+    setChrome(cleanValues.Chrome);
     setErrors({});
   };
   const [homeRecord, setHomeRecord] = React.useState(homeModelProp);
@@ -57,9 +90,20 @@ export default function HomeUpdateForm(props) {
   React.useEffect(resetStateValues, [homeRecord]);
   const validations = {
     name: [],
-    image_url: [],
-    bounty: [],
-    birthday: [],
+    pass: [],
+    auMNP: [],
+    aucellup: [],
+    aushinki: [],
+    aukihen: [],
+    uqMNP: [],
+    uqrikoup: [],
+    uqshinki: [],
+    uqkihen: [],
+    cyura: [],
+    yuima: [],
+    jigin: [],
+    credit: [],
+    Chrome: [],
   };
   const runValidationTasks = async (
     fieldName,
@@ -88,9 +132,20 @@ export default function HomeUpdateForm(props) {
         event.preventDefault();
         let modelFields = {
           name,
-          image_url,
-          bounty,
-          birthday,
+          pass,
+          auMNP,
+          aucellup,
+          aushinki,
+          aukihen,
+          uqMNP,
+          uqrikoup,
+          uqshinki,
+          uqkihen,
+          cyura,
+          yuima,
+          jigin,
+          credit,
+          Chrome,
         };
         const validationResponses = await Promise.all(
           Object.keys(validations).reduce((promises, fieldName) => {
@@ -147,9 +202,20 @@ export default function HomeUpdateForm(props) {
           if (onChange) {
             const modelFields = {
               name: value,
-              image_url,
-              bounty,
-              birthday,
+              pass,
+              auMNP,
+              aucellup,
+              aushinki,
+              aukihen,
+              uqMNP,
+              uqrikoup,
+              uqshinki,
+              uqkihen,
+              cyura,
+              yuima,
+              jigin,
+              credit,
+              Chrome,
             };
             const result = onChange(modelFields);
             value = result?.name ?? value;
@@ -165,85 +231,588 @@ export default function HomeUpdateForm(props) {
         {...getOverrideProps(overrides, "name")}
       ></TextField>
       <TextField
-        label="Image url"
+        label="Pass"
         isRequired={false}
         isReadOnly={false}
-        value={image_url}
+        value={pass}
         onChange={(e) => {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
               name,
-              image_url: value,
-              bounty,
-              birthday,
+              pass: value,
+              auMNP,
+              aucellup,
+              aushinki,
+              aukihen,
+              uqMNP,
+              uqrikoup,
+              uqshinki,
+              uqkihen,
+              cyura,
+              yuima,
+              jigin,
+              credit,
+              Chrome,
             };
             const result = onChange(modelFields);
-            value = result?.image_url ?? value;
+            value = result?.pass ?? value;
           }
-          if (errors.image_url?.hasError) {
-            runValidationTasks("image_url", value);
+          if (errors.pass?.hasError) {
+            runValidationTasks("pass", value);
           }
-          setImage_url(value);
+          setPass(value);
         }}
-        onBlur={() => runValidationTasks("image_url", image_url)}
-        errorMessage={errors.image_url?.errorMessage}
-        hasError={errors.image_url?.hasError}
-        {...getOverrideProps(overrides, "image_url")}
+        onBlur={() => runValidationTasks("pass", pass)}
+        errorMessage={errors.pass?.errorMessage}
+        hasError={errors.pass?.hasError}
+        {...getOverrideProps(overrides, "pass")}
       ></TextField>
       <TextField
-        label="Bounty"
+        label="Au mnp"
         isRequired={false}
         isReadOnly={false}
-        value={bounty}
+        type="number"
+        step="any"
+        value={auMNP}
         onChange={(e) => {
-          let { value } = e.target;
+          let value = isNaN(parseInt(e.target.value))
+            ? e.target.value
+            : parseInt(e.target.value);
           if (onChange) {
             const modelFields = {
               name,
-              image_url,
-              bounty: value,
-              birthday,
+              pass,
+              auMNP: value,
+              aucellup,
+              aushinki,
+              aukihen,
+              uqMNP,
+              uqrikoup,
+              uqshinki,
+              uqkihen,
+              cyura,
+              yuima,
+              jigin,
+              credit,
+              Chrome,
             };
             const result = onChange(modelFields);
-            value = result?.bounty ?? value;
+            value = result?.auMNP ?? value;
           }
-          if (errors.bounty?.hasError) {
-            runValidationTasks("bounty", value);
+          if (errors.auMNP?.hasError) {
+            runValidationTasks("auMNP", value);
           }
-          setBounty(value);
+          setAuMNP(value);
         }}
-        onBlur={() => runValidationTasks("bounty", bounty)}
-        errorMessage={errors.bounty?.errorMessage}
-        hasError={errors.bounty?.hasError}
-        {...getOverrideProps(overrides, "bounty")}
+        onBlur={() => runValidationTasks("auMNP", auMNP)}
+        errorMessage={errors.auMNP?.errorMessage}
+        hasError={errors.auMNP?.hasError}
+        {...getOverrideProps(overrides, "auMNP")}
       ></TextField>
       <TextField
-        label="Birthday"
+        label="Aucellup"
         isRequired={false}
         isReadOnly={false}
-        value={birthday}
+        type="number"
+        step="any"
+        value={aucellup}
         onChange={(e) => {
-          let { value } = e.target;
+          let value = isNaN(parseInt(e.target.value))
+            ? e.target.value
+            : parseInt(e.target.value);
           if (onChange) {
             const modelFields = {
               name,
-              image_url,
-              bounty,
-              birthday: value,
+              pass,
+              auMNP,
+              aucellup: value,
+              aushinki,
+              aukihen,
+              uqMNP,
+              uqrikoup,
+              uqshinki,
+              uqkihen,
+              cyura,
+              yuima,
+              jigin,
+              credit,
+              Chrome,
             };
             const result = onChange(modelFields);
-            value = result?.birthday ?? value;
+            value = result?.aucellup ?? value;
           }
-          if (errors.birthday?.hasError) {
-            runValidationTasks("birthday", value);
+          if (errors.aucellup?.hasError) {
+            runValidationTasks("aucellup", value);
           }
-          setBirthday(value);
+          setAucellup(value);
         }}
-        onBlur={() => runValidationTasks("birthday", birthday)}
-        errorMessage={errors.birthday?.errorMessage}
-        hasError={errors.birthday?.hasError}
-        {...getOverrideProps(overrides, "birthday")}
+        onBlur={() => runValidationTasks("aucellup", aucellup)}
+        errorMessage={errors.aucellup?.errorMessage}
+        hasError={errors.aucellup?.hasError}
+        {...getOverrideProps(overrides, "aucellup")}
+      ></TextField>
+      <TextField
+        label="Aushinki"
+        isRequired={false}
+        isReadOnly={false}
+        type="number"
+        step="any"
+        value={aushinki}
+        onChange={(e) => {
+          let value = isNaN(parseInt(e.target.value))
+            ? e.target.value
+            : parseInt(e.target.value);
+          if (onChange) {
+            const modelFields = {
+              name,
+              pass,
+              auMNP,
+              aucellup,
+              aushinki: value,
+              aukihen,
+              uqMNP,
+              uqrikoup,
+              uqshinki,
+              uqkihen,
+              cyura,
+              yuima,
+              jigin,
+              credit,
+              Chrome,
+            };
+            const result = onChange(modelFields);
+            value = result?.aushinki ?? value;
+          }
+          if (errors.aushinki?.hasError) {
+            runValidationTasks("aushinki", value);
+          }
+          setAushinki(value);
+        }}
+        onBlur={() => runValidationTasks("aushinki", aushinki)}
+        errorMessage={errors.aushinki?.errorMessage}
+        hasError={errors.aushinki?.hasError}
+        {...getOverrideProps(overrides, "aushinki")}
+      ></TextField>
+      <TextField
+        label="Aukihen"
+        isRequired={false}
+        isReadOnly={false}
+        type="number"
+        step="any"
+        value={aukihen}
+        onChange={(e) => {
+          let value = isNaN(parseInt(e.target.value))
+            ? e.target.value
+            : parseInt(e.target.value);
+          if (onChange) {
+            const modelFields = {
+              name,
+              pass,
+              auMNP,
+              aucellup,
+              aushinki,
+              aukihen: value,
+              uqMNP,
+              uqrikoup,
+              uqshinki,
+              uqkihen,
+              cyura,
+              yuima,
+              jigin,
+              credit,
+              Chrome,
+            };
+            const result = onChange(modelFields);
+            value = result?.aukihen ?? value;
+          }
+          if (errors.aukihen?.hasError) {
+            runValidationTasks("aukihen", value);
+          }
+          setAukihen(value);
+        }}
+        onBlur={() => runValidationTasks("aukihen", aukihen)}
+        errorMessage={errors.aukihen?.errorMessage}
+        hasError={errors.aukihen?.hasError}
+        {...getOverrideProps(overrides, "aukihen")}
+      ></TextField>
+      <TextField
+        label="Uq mnp"
+        isRequired={false}
+        isReadOnly={false}
+        type="number"
+        step="any"
+        value={uqMNP}
+        onChange={(e) => {
+          let value = isNaN(parseInt(e.target.value))
+            ? e.target.value
+            : parseInt(e.target.value);
+          if (onChange) {
+            const modelFields = {
+              name,
+              pass,
+              auMNP,
+              aucellup,
+              aushinki,
+              aukihen,
+              uqMNP: value,
+              uqrikoup,
+              uqshinki,
+              uqkihen,
+              cyura,
+              yuima,
+              jigin,
+              credit,
+              Chrome,
+            };
+            const result = onChange(modelFields);
+            value = result?.uqMNP ?? value;
+          }
+          if (errors.uqMNP?.hasError) {
+            runValidationTasks("uqMNP", value);
+          }
+          setUqMNP(value);
+        }}
+        onBlur={() => runValidationTasks("uqMNP", uqMNP)}
+        errorMessage={errors.uqMNP?.errorMessage}
+        hasError={errors.uqMNP?.hasError}
+        {...getOverrideProps(overrides, "uqMNP")}
+      ></TextField>
+      <TextField
+        label="Uqrikoup"
+        isRequired={false}
+        isReadOnly={false}
+        type="number"
+        step="any"
+        value={uqrikoup}
+        onChange={(e) => {
+          let value = isNaN(parseInt(e.target.value))
+            ? e.target.value
+            : parseInt(e.target.value);
+          if (onChange) {
+            const modelFields = {
+              name,
+              pass,
+              auMNP,
+              aucellup,
+              aushinki,
+              aukihen,
+              uqMNP,
+              uqrikoup: value,
+              uqshinki,
+              uqkihen,
+              cyura,
+              yuima,
+              jigin,
+              credit,
+              Chrome,
+            };
+            const result = onChange(modelFields);
+            value = result?.uqrikoup ?? value;
+          }
+          if (errors.uqrikoup?.hasError) {
+            runValidationTasks("uqrikoup", value);
+          }
+          setUqrikoup(value);
+        }}
+        onBlur={() => runValidationTasks("uqrikoup", uqrikoup)}
+        errorMessage={errors.uqrikoup?.errorMessage}
+        hasError={errors.uqrikoup?.hasError}
+        {...getOverrideProps(overrides, "uqrikoup")}
+      ></TextField>
+      <TextField
+        label="Uqshinki"
+        isRequired={false}
+        isReadOnly={false}
+        type="number"
+        step="any"
+        value={uqshinki}
+        onChange={(e) => {
+          let value = isNaN(parseInt(e.target.value))
+            ? e.target.value
+            : parseInt(e.target.value);
+          if (onChange) {
+            const modelFields = {
+              name,
+              pass,
+              auMNP,
+              aucellup,
+              aushinki,
+              aukihen,
+              uqMNP,
+              uqrikoup,
+              uqshinki: value,
+              uqkihen,
+              cyura,
+              yuima,
+              jigin,
+              credit,
+              Chrome,
+            };
+            const result = onChange(modelFields);
+            value = result?.uqshinki ?? value;
+          }
+          if (errors.uqshinki?.hasError) {
+            runValidationTasks("uqshinki", value);
+          }
+          setUqshinki(value);
+        }}
+        onBlur={() => runValidationTasks("uqshinki", uqshinki)}
+        errorMessage={errors.uqshinki?.errorMessage}
+        hasError={errors.uqshinki?.hasError}
+        {...getOverrideProps(overrides, "uqshinki")}
+      ></TextField>
+      <TextField
+        label="Uqkihen"
+        isRequired={false}
+        isReadOnly={false}
+        type="number"
+        step="any"
+        value={uqkihen}
+        onChange={(e) => {
+          let value = isNaN(parseInt(e.target.value))
+            ? e.target.value
+            : parseInt(e.target.value);
+          if (onChange) {
+            const modelFields = {
+              name,
+              pass,
+              auMNP,
+              aucellup,
+              aushinki,
+              aukihen,
+              uqMNP,
+              uqrikoup,
+              uqshinki,
+              uqkihen: value,
+              cyura,
+              yuima,
+              jigin,
+              credit,
+              Chrome,
+            };
+            const result = onChange(modelFields);
+            value = result?.uqkihen ?? value;
+          }
+          if (errors.uqkihen?.hasError) {
+            runValidationTasks("uqkihen", value);
+          }
+          setUqkihen(value);
+        }}
+        onBlur={() => runValidationTasks("uqkihen", uqkihen)}
+        errorMessage={errors.uqkihen?.errorMessage}
+        hasError={errors.uqkihen?.hasError}
+        {...getOverrideProps(overrides, "uqkihen")}
+      ></TextField>
+      <TextField
+        label="Cyura"
+        isRequired={false}
+        isReadOnly={false}
+        type="number"
+        step="any"
+        value={cyura}
+        onChange={(e) => {
+          let value = isNaN(parseInt(e.target.value))
+            ? e.target.value
+            : parseInt(e.target.value);
+          if (onChange) {
+            const modelFields = {
+              name,
+              pass,
+              auMNP,
+              aucellup,
+              aushinki,
+              aukihen,
+              uqMNP,
+              uqrikoup,
+              uqshinki,
+              uqkihen,
+              cyura: value,
+              yuima,
+              jigin,
+              credit,
+              Chrome,
+            };
+            const result = onChange(modelFields);
+            value = result?.cyura ?? value;
+          }
+          if (errors.cyura?.hasError) {
+            runValidationTasks("cyura", value);
+          }
+          setCyura(value);
+        }}
+        onBlur={() => runValidationTasks("cyura", cyura)}
+        errorMessage={errors.cyura?.errorMessage}
+        hasError={errors.cyura?.hasError}
+        {...getOverrideProps(overrides, "cyura")}
+      ></TextField>
+      <TextField
+        label="Yuima"
+        isRequired={false}
+        isReadOnly={false}
+        type="number"
+        step="any"
+        value={yuima}
+        onChange={(e) => {
+          let value = isNaN(parseInt(e.target.value))
+            ? e.target.value
+            : parseInt(e.target.value);
+          if (onChange) {
+            const modelFields = {
+              name,
+              pass,
+              auMNP,
+              aucellup,
+              aushinki,
+              aukihen,
+              uqMNP,
+              uqrikoup,
+              uqshinki,
+              uqkihen,
+              cyura,
+              yuima: value,
+              jigin,
+              credit,
+              Chrome,
+            };
+            const result = onChange(modelFields);
+            value = result?.yuima ?? value;
+          }
+          if (errors.yuima?.hasError) {
+            runValidationTasks("yuima", value);
+          }
+          setYuima(value);
+        }}
+        onBlur={() => runValidationTasks("yuima", yuima)}
+        errorMessage={errors.yuima?.errorMessage}
+        hasError={errors.yuima?.hasError}
+        {...getOverrideProps(overrides, "yuima")}
+      ></TextField>
+      <TextField
+        label="Jigin"
+        isRequired={false}
+        isReadOnly={false}
+        type="number"
+        step="any"
+        value={jigin}
+        onChange={(e) => {
+          let value = isNaN(parseInt(e.target.value))
+            ? e.target.value
+            : parseInt(e.target.value);
+          if (onChange) {
+            const modelFields = {
+              name,
+              pass,
+              auMNP,
+              aucellup,
+              aushinki,
+              aukihen,
+              uqMNP,
+              uqrikoup,
+              uqshinki,
+              uqkihen,
+              cyura,
+              yuima,
+              jigin: value,
+              credit,
+              Chrome,
+            };
+            const result = onChange(modelFields);
+            value = result?.jigin ?? value;
+          }
+          if (errors.jigin?.hasError) {
+            runValidationTasks("jigin", value);
+          }
+          setJigin(value);
+        }}
+        onBlur={() => runValidationTasks("jigin", jigin)}
+        errorMessage={errors.jigin?.errorMessage}
+        hasError={errors.jigin?.hasError}
+        {...getOverrideProps(overrides, "jigin")}
+      ></TextField>
+      <TextField
+        label="Credit"
+        isRequired={false}
+        isReadOnly={false}
+        type="number"
+        step="any"
+        value={credit}
+        onChange={(e) => {
+          let value = isNaN(parseInt(e.target.value))
+            ? e.target.value
+            : parseInt(e.target.value);
+          if (onChange) {
+            const modelFields = {
+              name,
+              pass,
+              auMNP,
+              aucellup,
+              aushinki,
+              aukihen,
+              uqMNP,
+              uqrikoup,
+              uqshinki,
+              uqkihen,
+              cyura,
+              yuima,
+              jigin,
+              credit: value,
+              Chrome,
+            };
+            const result = onChange(modelFields);
+            value = result?.credit ?? value;
+          }
+          if (errors.credit?.hasError) {
+            runValidationTasks("credit", value);
+          }
+          setCredit(value);
+        }}
+        onBlur={() => runValidationTasks("credit", credit)}
+        errorMessage={errors.credit?.errorMessage}
+        hasError={errors.credit?.hasError}
+        {...getOverrideProps(overrides, "credit")}
+      ></TextField>
+      <TextField
+        label="Chrome"
+        isRequired={false}
+        isReadOnly={false}
+        type="number"
+        step="any"
+        value={Chrome}
+        onChange={(e) => {
+          let value = isNaN(parseInt(e.target.value))
+            ? e.target.value
+            : parseInt(e.target.value);
+          if (onChange) {
+            const modelFields = {
+              name,
+              pass,
+              auMNP,
+              aucellup,
+              aushinki,
+              aukihen,
+              uqMNP,
+              uqrikoup,
+              uqshinki,
+              uqkihen,
+              cyura,
+              yuima,
+              jigin,
+              credit,
+              Chrome: value,
+            };
+            const result = onChange(modelFields);
+            value = result?.Chrome ?? value;
+          }
+          if (errors.Chrome?.hasError) {
+            runValidationTasks("Chrome", value);
+          }
+          setChrome(value);
+        }}
+        onBlur={() => runValidationTasks("Chrome", Chrome)}
+        errorMessage={errors.Chrome?.errorMessage}
+        hasError={errors.Chrome?.hasError}
+        {...getOverrideProps(overrides, "Chrome")}
       ></TextField>
       <Flex
         justifyContent="space-between"

@@ -12,7 +12,7 @@ export declare type ValidationResponse = {
     errorMessage?: string;
 };
 export declare type ValidationFunction<T> = (value: T, validationResponse: ValidationResponse) => ValidationResponse | Promise<ValidationResponse>;
-export declare type HomeCreateFormInputValues = {
+export declare type NewForm12InputValues = {
     name?: string;
     pass?: string;
     auMNP?: number;
@@ -29,7 +29,7 @@ export declare type HomeCreateFormInputValues = {
     credit?: number;
     Chrome?: number;
 };
-export declare type HomeCreateFormValidationValues = {
+export declare type NewForm12ValidationValues = {
     name?: ValidationFunction<string>;
     pass?: ValidationFunction<string>;
     auMNP?: ValidationFunction<number>;
@@ -47,8 +47,8 @@ export declare type HomeCreateFormValidationValues = {
     Chrome?: ValidationFunction<number>;
 };
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
-export declare type HomeCreateFormOverridesProps = {
-    HomeCreateFormGrid?: PrimitiveOverrideProps<GridProps>;
+export declare type NewForm12OverridesProps = {
+    NewForm12Grid?: PrimitiveOverrideProps<GridProps>;
     name?: PrimitiveOverrideProps<TextFieldProps>;
     pass?: PrimitiveOverrideProps<TextFieldProps>;
     auMNP?: PrimitiveOverrideProps<TextFieldProps>;
@@ -65,14 +65,14 @@ export declare type HomeCreateFormOverridesProps = {
     credit?: PrimitiveOverrideProps<TextFieldProps>;
     Chrome?: PrimitiveOverrideProps<TextFieldProps>;
 } & EscapeHatchProps;
-export declare type HomeCreateFormProps = React.PropsWithChildren<{
-    overrides?: HomeCreateFormOverridesProps | undefined | null;
+export declare type NewForm12Props = React.PropsWithChildren<{
+    overrides?: NewForm12OverridesProps | undefined | null;
 } & {
     clearOnSuccess?: boolean;
-    onSubmit?: (fields: HomeCreateFormInputValues) => HomeCreateFormInputValues;
-    onSuccess?: (fields: HomeCreateFormInputValues) => void;
-    onError?: (fields: HomeCreateFormInputValues, errorMessage: string) => void;
-    onChange?: (fields: HomeCreateFormInputValues) => HomeCreateFormInputValues;
-    onValidate?: HomeCreateFormValidationValues;
+    onSubmit?: (fields: NewForm12InputValues) => NewForm12InputValues;
+    onSuccess?: (fields: NewForm12InputValues) => void;
+    onError?: (fields: NewForm12InputValues, errorMessage: string) => void;
+    onChange?: (fields: NewForm12InputValues) => NewForm12InputValues;
+    onValidate?: NewForm12ValidationValues;
 } & React.CSSProperties>;
-export default function HomeCreateForm(props: HomeCreateFormProps): React.ReactElement;
+export default function NewForm12(props: NewForm12Props): React.ReactElement;

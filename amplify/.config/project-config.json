@@ -2,7 +2,7 @@
   "providers": [
     "awscloudformation"
   ],
-  "projectName": "sakumotodailyreport",
+  "projectName": "nohara",
   "version": "3.1",
   "frontend": "javascript",
   "javascript": {

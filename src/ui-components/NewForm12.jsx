@@ -11,7 +11,7 @@ import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Home } from "../models";
 import { fetchByPath, validateField } from "./utils";
 import { DataStore } from "aws-amplify";
-export default function HomeCreateForm(props) {
+export default function NewForm12(props) {
   const {
     clearOnSuccess = true,
     onSuccess,
@@ -173,7 +173,7 @@ export default function HomeCreateForm(props) {
           }
         }
       }}
-      {...getOverrideProps(overrides, "HomeCreateForm")}
+      {...getOverrideProps(overrides, "NewForm12")}
       {...rest}
     >
       <TextField

@@ -1,7 +1,7 @@
 export const schema = {
     "models": {
-        "Todos": {
-            "name": "Todos",
+        "Home": {
+            "name": "Home",
             "fields": {
                 "id": {
                     "name": "id",
@@ -17,10 +17,101 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "email": {
-                    "name": "email",
+                "pass": {
+                    "name": "pass",
                     "isArray": false,
                     "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "auMNP": {
+                    "name": "auMNP",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "aucellup": {
+                    "name": "aucellup",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "aushinki": {
+                    "name": "aushinki",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "aukihen": {
+                    "name": "aukihen",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "uqMNP": {
+                    "name": "uqMNP",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "uqrikoup": {
+                    "name": "uqrikoup",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "uqshinki": {
+                    "name": "uqshinki",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "uqkihen": {
+                    "name": "uqkihen",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "cyura": {
+                    "name": "cyura",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "yuima": {
+                    "name": "yuima",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "jigin": {
+                    "name": "jigin",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "credit": {
+                    "name": "credit",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "Chrome": {
+                    "name": "Chrome",
+                    "isArray": false,
+                    "type": "Int",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -42,7 +133,7 @@ export const schema = {
                 }
             },
             "syncable": true,
-            "pluralName": "Todos",
+            "pluralName": "Homes",
             "attributes": [
                 {
                     "type": "model",
@@ -70,5 +161,5 @@ export const schema = {
     "enums": {},
     "nonModels": {},
     "codegenVersion": "3.4.4",
-    "version": "e4dff8d242b13901cea333200e3f595f"
+    "version": "8e729d916a1bf2751395bd0d395630ca"
 };
