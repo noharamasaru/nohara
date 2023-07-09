@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Table, Button } from "antd";
+import { Table, Button, Row, Col } from "antd";
 import { Link } from "react-router-dom";
 import { useAuthenticator } from "@aws-amplify/ui-react";
 import { Auth } from "aws-amplify";
@@ -49,10 +49,6 @@ const MyPage = () => {
       <div>
         <Link to="/my_page">マイページへ</Link>
       </div>
-      <div>
-        <Link to="/todo_page">TODOページへ</Link>
-      </div>
-      <Button onClick={signOut}>ログアウトする</Button>
     </>
   );
 };

@@ -1,5 +1,6 @@
 import { Authenticator } from "@aws-amplify/ui-react";
 import MyPage from "../MyPage";
+import ItemPage from "../ItemPage";
 
 const LoginPage = () => {
   return (
@@ -14,7 +15,7 @@ const LoginPage = () => {
     >
       {({ signOut, user }) => (
         <Authenticator.Provider>
-          <MyPage />
+          <ItemPage />
         </Authenticator.Provider>
       )}
     </Authenticator>

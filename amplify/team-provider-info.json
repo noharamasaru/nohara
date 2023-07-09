@@ -19,7 +19,7 @@
       "function": {
         "noharaAppUser": {
           "deploymentBucketName": "amplify-nohara-staging-31742-deployment",
-          "s3Key": "amplify-builds/noharaAppUser-4a78502b3368557a4f4c-build.zip"
+          "s3Key": "amplify-builds/noharaAppUser-66506f6a2b553367586a-build.zip"
         }
       },
       "storage": {
