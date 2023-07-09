@@ -53,10 +53,17 @@ const MonthlySummaryPage = () => {
     },
   ];
 
+  const dataName = {
+    'au_cellup':'au セルアップ',
+    'au_device': 'au 機種変更',
+    'au_new':'au 新規',
+    'au_mnp': 'au MNP',
+  };
+
   const dataSource = summaryData
     ? Object.entries(summaryData).map(([sellName, count]) => ({
         key: sellName,
-        sellName: sellName,
+        sellName: dataName[sellName],
         count: count,
       }))
     : [];
