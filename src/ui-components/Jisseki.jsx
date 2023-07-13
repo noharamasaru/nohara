@@ -8,26 +8,25 @@
 import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { View } from "@aws-amplify/ui-react";
-export default function Login(props) {
+export default function Jisseki(props) {
   const { overrides, ...rest } = props;
   return (
     <View
-      width="144px"
-      height="44px"
+      width="396px"
+      height="79px"
       display="block"
       gap="unset"
       alignItems="unset"
       justifyContent="unset"
       position="relative"
       padding="0px 0px 0px 0px"
-      backgroundColor="rgba(11,121,250,0.99)"
-      {...getOverrideProps(overrides, "Login")}
+      {...getOverrideProps(overrides, "Jisseki")}
       {...rest}
     >
       <View
-        width="144px"
-        height="44px"
-        {...getOverrideProps(overrides, "login")}
+        width="396px"
+        height="79px"
+        {...getOverrideProps(overrides, "jisseki")}
       ></View>
     </View>
   );

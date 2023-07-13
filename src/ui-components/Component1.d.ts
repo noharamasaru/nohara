@@ -6,13 +6,14 @@
 
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { ViewProps } from "@aws-amplify/ui-react";
+import { TextProps, ViewProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
-export declare type LoginOverridesProps = {
-    Login?: PrimitiveOverrideProps<ViewProps>;
-    login?: PrimitiveOverrideProps<ViewProps>;
+export declare type Component1OverridesProps = {
+    Component1?: PrimitiveOverrideProps<ViewProps>;
+    "Rectangle 71"?: PrimitiveOverrideProps<ViewProps>;
+    "\u5B9F\u7E3E\u7BA1\u7406"?: PrimitiveOverrideProps<TextProps>;
 } & EscapeHatchProps;
-export declare type LoginProps = React.PropsWithChildren<Partial<ViewProps> & {
-    overrides?: LoginOverridesProps | undefined | null;
+export declare type Component1Props = React.PropsWithChildren<Partial<ViewProps> & {
+    overrides?: Component1OverridesProps | undefined | null;
 }>;
-export default function Login(props: LoginProps): React.ReactElement;
+export default function Component1(props: Component1Props): React.ReactElement;

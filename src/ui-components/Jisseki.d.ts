@@ -8,11 +8,11 @@ import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { ViewProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
-export declare type LoginOverridesProps = {
-    Login?: PrimitiveOverrideProps<ViewProps>;
-    login?: PrimitiveOverrideProps<ViewProps>;
+export declare type JissekiOverridesProps = {
+    Jisseki?: PrimitiveOverrideProps<ViewProps>;
+    jisseki?: PrimitiveOverrideProps<ViewProps>;
 } & EscapeHatchProps;
-export declare type LoginProps = React.PropsWithChildren<Partial<ViewProps> & {
-    overrides?: LoginOverridesProps | undefined | null;
+export declare type JissekiProps = React.PropsWithChildren<Partial<ViewProps> & {
+    overrides?: JissekiOverridesProps | undefined | null;
 }>;
-export default function Login(props: LoginProps): React.ReactElement;
+export default function Jisseki(props: JissekiProps): React.ReactElement;

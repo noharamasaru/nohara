@@ -13,21 +13,18 @@
       "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-nohara-staging-31742-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     },
     "categories": {
-      "auth": {
-        "noharaapp": {}
-      },
       "function": {
         "noharaAppUser": {
           "deploymentBucketName": "amplify-nohara-staging-31742-deployment",
-          "s3Key": "amplify-builds/noharaAppUser-66506f6a2b553367586a-build.zip"
+          "s3Key": "amplify-builds/noharaAppUser-686a485472446a6c2b77-build.zip"
         }
+      },
+      "auth": {
+        "noharaapp": {}
       },
       "storage": {
         "noharaAppUser": {},
         "s3noharaappstorage6fb6ee65": {}
-      },
-      "api": {
-        "noharaAppUser": {}
       }
     }
   }

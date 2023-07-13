@@ -5,26 +5,16 @@
  **************************************************************************/
 
 import * as React from "react";
-import { Home } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { TextProps, ViewProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
-export declare type AndroidLarge1OverridesProps = {
-    AndroidLarge1?: PrimitiveOverrideProps<ViewProps>;
-    "Rectangle 65"?: PrimitiveOverrideProps<ViewProps>;
-    "Android Large - 1/"?: PrimitiveOverrideProps<ViewProps>;
-    "Rectangle 62"?: PrimitiveOverrideProps<ViewProps>;
+export declare type Rectangle63OverridesProps = {
+    Rectangle63?: PrimitiveOverrideProps<ViewProps>;
     "Rectangle 61"?: PrimitiveOverrideProps<ViewProps>;
     "\u4FDD\u5B58"?: PrimitiveOverrideProps<ViewProps>;
     "\u30ED\u30B0\u30A4\u30F3"?: PrimitiveOverrideProps<TextProps>;
-    "Rectangle 69"?: PrimitiveOverrideProps<ViewProps>;
-    "Rectangle 70"?: PrimitiveOverrideProps<ViewProps>;
-    "Rectangle 71"?: PrimitiveOverrideProps<ViewProps>;
-    "\u5B9F\u7E3E\u7BA1\u7406"?: PrimitiveOverrideProps<TextProps>;
 } & EscapeHatchProps;
-export declare type AndroidLarge1Props = React.PropsWithChildren<Partial<ViewProps> & {
-    home?: Home;
-} & {
-    overrides?: AndroidLarge1OverridesProps | undefined | null;
+export declare type Rectangle63Props = React.PropsWithChildren<Partial<ViewProps> & {
+    overrides?: Rectangle63OverridesProps | undefined | null;
 }>;
-export default function AndroidLarge1(props: AndroidLarge1Props): React.ReactElement;
+export default function Rectangle63(props: Rectangle63Props): React.ReactElement;
